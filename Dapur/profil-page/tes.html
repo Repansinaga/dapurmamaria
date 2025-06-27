@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Makanan Indonesia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Menu Makanan Indonesia</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Cari menu...">
+                <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="menu-container" id="menuContainer">
+            <!-- Menu items will be displayed here -->
+            <div class="menu-item" data-name="ayam geprek">
+                <div class="menu-image">
+                    <img src="./images/AyamGeprek.jpg" alt="Ayam Geprek">
+                </div>
+                <div class="menu-details">
+                    <h2>Ayam Geprek</h2>
+                    <p class="description">Ayam goreng renyah yang digeprek (dihancurkan) dan dicampur dengan sambal bawang pedas. Disajikan dengan nasi putih hangat, lalapan segar, dan irisan mentimun. Tekstur ayam yang renyah di luar dan juicy di dalam, dipadukan dengan pedasnya sambal membuat hidangan ini sangat menggugah selera.</p>
+                    <p class="price">Rp 10.000</p>
+                </div>
+            </div>
+
+            <div class="menu-item" data-name="nasi goreng">
+                <div class="menu-image">
+                    <img src="images/NasiGoreng.jpg" alt="Nasi Goreng">
+                </div>
+                <div class="menu-details">
+                    <h2>Nasi Goreng</h2>
+                    <p class="description">Nasi yang digoreng dengan bumbu rempah khas Indonesia. Dimasak dengan telur, potongan ayam, udang, dan sayuran segar. Disajikan dengan telur mata sapi, irisan mentimun, dan kerupuk. Aroma rempah yang khas dan rasa gurih yang sempurna menjadikan nasi goreng sebagai hidangan favorit sepanjang masa.</p>
+                    <p class="price">Rp 12.000</p>
+                </div>
+            </div>
+
+            <div class="menu-item" data-name="soto">
+                <div class="menu-image">
+                    <img src="images/Soto.jpg" alt="Soto">
+                </div>
+                <div class="menu-details">
+                    <h2>Soto</h2>
+                    <p class="description">Sup ayam tradisional Indonesia dengan kuah kuning yang kaya rempah seperti kunyit, serai, dan daun jeruk. Disajikan dengan potongan daging ayam, mie, tauge, telur rebus, dan ditaburi dengan bawang goreng dan seledri. Kesegaran kuah dan kelezatan rempah membuat soto menjadi hidangan yang menyegarkan.</p>
+                    <p class="price">Rp 15.000</p>
+                </div>
+            </div>
+
+            <div class="menu-item" data-name="bakso">
+                <div class="menu-image">
+                    <img src="images/Bakso.jpg" alt="Bakso">
+                </div>
+                <div class="menu-details">
+                    <h2>Bakso</h2>
+                    <p class="description">Bola daging kenyal yang terbuat dari campuran daging sapi giling dan tepung tapioka. Disajikan dalam kuah kaldu sapi yang gurih dengan mie, tahu, bihun, dan sayuran hijau. Tambahan sambal dan kecap manis membuat bakso semakin nikmat disantap saat cuaca dingin maupun panas.</p>
+                    <p class="price">Rp 15.000</p>
+                </div>
+            </div>
+
+            <div class="menu-item" data-name="rawon">
+                <div class="menu-image">
+                    <img src="images/RawonDaging.jpg" alt="Rawon">
+                </div>
+                <div class="menu-details">
+                    <h2>Rawon</h2>
+                    <p class="description">Sup daging sapi hitam khas Jawa Timur yang menggunakan kluwek sebagai bumbu utama. Disajikan dengan nasi putih, tauge pendek, telur asin, dan sambal. Kuah hitam pekat dengan cita rasa yang kaya dan daging sapi yang empuk membuat rawon menjadi hidangan yang sangat istimewa.</p>
+                    <p class="price">Rp 20.000</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <p>Tidak ada menu yang sesuai dengan pencarian Anda.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Menu Makanan Indonesia. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

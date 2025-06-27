@@ -1,0 +1,323 @@
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-left: 240px;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 20px;
+            border-radius: 8px 8px 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .header h1 {
+            margin: 0;
+        }
+        
+        .welcome {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .card {
+            background-color: #fff;
+            border: 1px solid #dee2e6; /* mirip table-bordered */
+            border-radius: 0.25rem;    /* sudut sedikit membulat */
+            padding: 0;                /* hilangkan padding luar */
+            margin-bottom: 1.5rem;
+            box-shadow:  0 6px 12px rgba(0, 0, 0, 0.2);         /* hilangkan shadow untuk table-style */
+        }
+
+        .card-header {
+            background-color: #fff;
+            padding: 1rem;
+            font-weight: 600;
+            font-size: 1rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .card-body {
+            padding: 1rem;
+        }
+
+        
+        form {
+            display: grid;
+            grid-gap: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #d54838;
+        }
+
+        /* Tombol kecil warna merah */
+        .btn-hapus {
+            background-color: #dc3545;
+            color: #fff;
+            padding: 4px 10px;
+            font-size: 12px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-hapus:hover {
+            background-color: #c82333;
+        }
+
+        .btn-edit {
+            background-color: #f6ee5d;
+            color: #000;
+            padding: 4px 10px;
+            font-size: 12px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-edit:hover {
+            background-color: #e9e257;
+        }
+
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            width: 400px;
+            border-radius: 8px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .modal-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto; /* penting agar bisa scroll saat konten tinggi */
+        }
+
+        .modal-content-menu {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px; /* lebih lebar agar muat */
+            position: relative;
+            box-sizing: border-box;
+            max-height: 90vh; /* biar tidak keluar dari layar */
+            overflow-y: auto;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .alert {
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        
+        .alert-success {
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+        }
+        
+        .alert-danger {
+            background-color: #f2dede;
+            color: #a94442;
+            border: 1px solid #ebccd1;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        table th, table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table th {
+            background-color: #f2f2f2;
+        }
+
+        .jumlah-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .jumlah-wrapper input[type="number"] {
+            width: 70px;
+            height: 40px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Tombol + dan - disusun vertikal */
+        .tombol-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        /* Style tombolnya */
+        .tombol-vertical button {
+            background-color: #e74c3c;
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .tombol-vertical button:hover {
+            background-color: #c0392b;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 220px;
+            height: 100vh;
+            background-color: #343a40;  /* Warna gelap */
+            color: #fff;                /* Warna teks putih */
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            overflow-y: auto;
+            z-index: 1000;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 10px 0;
+            color: #f8f9fa; /* Warna link terang */
+            text-decoration: none;
+            transition: background-color 0.2s, padding-left 0.2s;
+        }
+
+        .sidebar a:hover {
+            background-color: #495057; /* Warna hover lebih terang sedikit */
+            padding-left: 5px;
+        }
+
+        .sidebar a.text-danger {
+            color: #ff4d4f; /* Merah terang untuk tombol keluar */
+        }
+
+        
+        .logout {
+            background-color: #f44336;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+        
+        .logout:hover {
+            background-color: #d32f2f;
+        }
+
+        .chart-container {
+            width: 100%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        canvas {
+            width: 100% !important;
+            height: 400px !important;
+        }

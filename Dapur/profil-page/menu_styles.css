@@ -1,0 +1,272 @@
+/* Reset dan Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles - Minimalis */
+header {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px 0; /* Reduced padding for more minimalist look */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.4rem; /* Smaller font size */
+    font-weight: 700;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: auto; /* Push links to the right */
+}
+
+.nav-links li {
+    margin-left: 1.5rem; /* Reduced margin */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem; /* Slightly smaller font */
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: #f1c40f;
+}
+
+/* Search Bar Styles - Left Position */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px; /* Smaller radius */
+    padding: 4px 12px; /* Reduced padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px; /* Fixed width */
+    margin: 0; /* Reset margin */
+}
+
+#searchInput {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 6px 5px; /* Reduced padding */
+    font-size: 0.85rem; /* Smaller font */
+    width: 100%;
+}
+
+#searchButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #e74c3c;
+    font-size: 0.9rem; /* Smaller icon */
+}
+
+/* Menu Title */
+.menu-title {
+    text-align: center;
+    margin: 30px 0; /* Reduced margin */
+    color: #e74c3c;
+    font-size: 2.2rem; /* Smaller font */
+}
+
+/* Menu Title */
+.category-title {
+    text-align: center;
+    margin: 10px 0;
+    color: white; /* Ganti warna teks agar kontras */
+    font-size: 1.5rem;
+    background-color: #bcb4b4; /* Warna background */
+    padding: 5px 530px;
+    display: inline-block; /* Supaya hanya selebar teks */
+    border-radius: 6px; /* Sudut melengkung */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Opsional: bayangan */
+}
+
+
+/* Menu Container Styles */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 30px 0;
+}
+
+/* Menu Item Styles */
+.menu-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.menu-item:hover .menu-image img {
+    transform: scale(1.05);
+}
+
+.menu-details {
+    padding: 20px;
+}
+
+.menu-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #e74c3c;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* No Results Message */
+.no-results {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 0; /* Reduced padding */
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .nav-links {
+        margin-top: 10px;
+        margin-left: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .nav-links li {
+        margin: 0;
+    }
+    
+    .search-container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .menu-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .menu-image {
+        height: 180px;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-links li {
+        margin: 5px;
+    }
+}
+
+.menu-details {
+    display: none;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu-item.active .menu-details {
+    display: block;
+}
